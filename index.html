@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentimental - Story to Music Test</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Your Life, Your Story, Your Music</h1>
+        <p>Transform your personal moments into meaningful stories and music</p>
+    </header>
+
+    <main>
+        <section id="story-input" class="card">
+            <h2>Share Your Moment</h2>
+            <p>Tell us about a meaningful event, emotion, or experience in your life:</p>
+            <textarea id="user-story" placeholder="Start typing your story here..."></textarea>
+            <button id="enhance-story" class="primary-button">Transform My Story</button>
+        </section>
+
+        <section id="enhanced-story" class="card hidden">
+            <h2>Your Enhanced Story</h2>
+            <div id="story-output"></div>
+            <div class="button-group">
+                <button id="edit-story" class="secondary-button">Edit Story</button>
+                <button id="create-music" class="primary-button">Turn Into Music</button>
+            </div>
+        </section>
+
+        <section id="music-options" class="card hidden">
+            <h2>Choose Your Music Style</h2>
+            <div class="music-styles">
+                <div class="style-option">
+                    <input type="radio" id="pop" name="music-style" value="pop" checked>
+                    <label for="pop">Pop</label>
+                </div>
+                <div class="style-option">
+                    <input type="radio" id="folk" name="music-style" value="folk">
+                    <label for="folk">Folk/Acoustic</label>
+                </div>
+                <div class="style-option">
+                    <input type="radio" id="electronic" name="music-style" value="electronic">
+                    <label for="electronic">Electronic</label>
+                </div>
+                <div class="style-option">
+                    <input type="radio" id="rock" name="music-style" value="rock">
+                    <label for="rock">Rock</label>
+                </div>
+            </div>
+            <button id="generate-music" class="primary-button">Generate Music</button>
+        </section>
+
+        <section id="result" class="card hidden">
+            <h2>Your Story as Music</h2>
+            <div id="album-cover-container">
+                <img id="album-cover" src="placeholder-album.jpg" alt="Generated album cover">
+            </div>
+            <div id="music-player">
+                <audio id="music-audio" controls></audio>
+            </div>
+            <div id="lyrics-container">
+                <h3>Lyrics</h3>
+                <div id="lyrics"></div>
+            </div>
+            <button id="start-over" class="secondary-button">Create Another</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>This is a test service for Sentimental. All data is stored locally in your browser.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
