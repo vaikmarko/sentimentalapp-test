@@ -1,0 +1,146 @@
+:root {
+    --primary-color: #7742c0;
+    --secondary-color: #a566ff;
+    --text-color: #333;
+    --background-color: #f5f5f7;
+    --card-background: #fff;
+    --border-radius: 12px;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+header h1 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.card {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 30px;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+textarea {
+    width: 100%;
+    min-height: 200px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    margin: 15px 0;
+    font-family: inherit;
+    font-size: 16px;
+    resize: vertical;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.primary-button {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.primary-button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.secondary-button {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.secondary-button:hover {
+    background-color: rgba(119, 66, 192, 0.1);
+}
+
+.hidden {
+    display: none;
+}
+
+.music-styles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.style-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#album-cover-container {
+    margin: 20px auto;
+    max-width: 300px;
+}
+
+#album-cover {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+#music-player {
+    margin: 30px 0;
+}
+
+audio {
+    width: 100%;
+}
+
+#lyrics-container {
+    margin: 20px 0;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #777;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .card {
+        padding: 20px;
+    }
+}
