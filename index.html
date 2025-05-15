@@ -8,68 +8,118 @@
 </head>
 <body>
     <header>
-        <h1>Your Life, Your Story, Your Music</h1>
-        <p>Transform your personal moments into meaningful stories and music</p>
+        <h1>Sentimental - Your Story to Music Journey</h1>
+        <p>Share your story, receive insights, and transform it into music</p>
     </header>
 
     <main>
-        <section id="story-input" class="card">
-            <h2>Share Your Moment</h2>
-            <p>Tell us about a meaningful event, emotion, or experience in your life:</p>
-            <textarea id="user-story" placeholder="Start typing your story here..."></textarea>
-            <button id="enhance-story" class="primary-button">Transform My Story</button>
-        </section>
-
-        <section id="enhanced-story" class="card hidden">
-            <h2>Your Enhanced Story</h2>
-            <div id="story-output"></div>
+        <!-- Chat Section -->
+        <section id="chat-section" class="card">
+            <h2>Share Your Story</h2>
+            <p>Chat with our AI assistant to help you tell your story. Write in any language!</p>
+            
+            <div id="chat-container"></div>
+            
+            <div class="chat-controls">
+                <input type="text" id="user-input" placeholder="Type your message here...">
+                <button id="send-button">Send</button>
+            </div>
+            
             <div class="button-group">
-                <button id="edit-story" class="secondary-button">Edit Story</button>
-                <button id="create-music" class="primary-button">Turn Into Music</button>
+                <button id="finish-story-btn" class="secondary-button">Finish & Review Story</button>
             </div>
         </section>
 
-        <section id="music-options" class="card hidden">
+        <!-- Story Review Section -->
+        <section id="story-review-section" class="card hidden">
+            <h2>Review Your Story</h2>
+            <div id="story-content" contenteditable="true"></div>
+            
+            <div class="button-group">
+                <button id="back-to-chat-btn" class="secondary-button">Back to Chat</button>
+                <button id="enhance-story-btn" class="primary-button">Get Deeper Reflection</button>
+            </div>
+        </section>
+
+        <!-- Enhanced Story Section -->
+        <section id="enhanced-story-section" class="card hidden">
+            <h2>Your Enhanced Story</h2>
+            <div id="enhanced-content"></div>
+            
+            <div class="button-group">
+                <button id="back-to-review-btn" class="secondary-button">Edit Story</button>
+                <button id="to-music-options-btn" class="primary-button">Create Music</button>
+            </div>
+        </section>
+
+        <!-- Music Options Section -->
+        <section id="music-options-section" class="card hidden">
             <h2>Choose Your Music Style</h2>
-            <div class="music-styles">
-                <div class="style-option">
-                    <input type="radio" id="pop" name="music-style" value="pop" checked>
-                    <label for="pop">Pop</label>
-                </div>
-                <div class="style-option">
-                    <input type="radio" id="folk" name="music-style" value="folk">
-                    <label for="folk">Folk/Acoustic</label>
-                </div>
-                <div class="style-option">
-                    <input type="radio" id="electronic" name="music-style" value="electronic">
-                    <label for="electronic">Electronic</label>
-                </div>
-                <div class="style-option">
-                    <input type="radio" id="rock" name="music-style" value="rock">
-                    <label for="rock">Rock</label>
-                </div>
+            
+            <div class="music-options">
+                <label>
+                    <input type="radio" name="music-style" value="pop" checked>
+                    <span class="option-label">Pop</span>
+                    <span class="option-description">Catchy, contemporary sound</span>
+                </label>
+                
+                <label>
+                    <input type="radio" name="music-style" value="folk">
+                    <span class="option-label">Folk/Acoustic</span>
+                    <span class="option-description">Warm, authentic feel</span>
+                </label>
+                
+                <label>
+                    <input type="radio" name="music-style" value="electronic">
+                    <span class="option-label">Electronic</span>
+                    <span class="option-description">Modern, atmospheric</span>
+                </label>
+                
+                <label>
+                    <input type="radio" name="music-style" value="rock">
+                    <span class="option-label">Rock</span>
+                    <span class="option-description">Energetic, powerful</span>
+                </label>
             </div>
-            <button id="generate-music" class="primary-button">Generate Music</button>
+            
+            <div class="button-group">
+                <button id="back-to-enhanced-btn" class="secondary-button">Back</button>
+                <button id="generate-lyrics-btn" class="primary-button">Generate Lyrics</button>
+            </div>
         </section>
 
-        <section id="result" class="card hidden">
-            <h2>Your Story as Music</h2>
-            <div id="album-cover-container">
-                <img id="album-cover" src="placeholder-album.jpg" alt="Generated album cover">
+        <!-- Lyrics Section -->
+        <section id="lyrics-section" class="card hidden">
+            <h2>Your Story as Lyrics</h2>
+            <div id="lyrics-content"></div>
+            
+            <div class="button-group">
+                <button id="back-to-music-options-btn" class="secondary-button">Change Style</button>
+                <button id="generate-music-btn" class="primary-button">Create Music</button>
             </div>
+        </section>
+
+        <!-- Music Result Section -->
+        <section id="music-result-section" class="card hidden">
+            <h2>Your Story as Music</h2>
+            
+            <div id="album-cover"></div>
+            
             <div id="music-player">
                 <audio id="music-audio" controls></audio>
             </div>
-            <div id="lyrics-container">
-                <h3>Lyrics</h3>
-                <div id="lyrics"></div>
+            
+            <div id="final-lyrics"></div>
+            
+            <div class="button-group">
+                <button id="download-btn" class="primary-button">Download</button>
+                <button id="start-new-btn" class="secondary-button">Start New Story</button>
             </div>
-            <button id="start-over" class="secondary-button">Create Another</button>
         </section>
     </main>
 
     <footer>
-        <p>This is a test service for Sentimental. All data is stored locally in your browser.</p>
+        <p>Sentimental Test Service - Your Life, Your Story</p>
     </footer>
 
     <script src="script.js"></script>
